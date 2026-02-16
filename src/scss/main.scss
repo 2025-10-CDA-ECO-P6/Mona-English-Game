@@ -4,29 +4,64 @@
 @use "abstracts/breakpoints" as *;
 @use "abstracts/mixins" as *;
 
-
+/////////////////////////////////////////////////
+// RESET STYLES
+////////////////////////////////////////////////
 * {
   margin: 0;
   padding: 0;
 }
 
-header {
-  margin: 0;
-  background-color: $primary600;
-  padding: 0;
+/////////////////////////////////////////////////
+// HEADER
+////////////////////////////////////////////////
+
+.header {
+  background-color: #165963;
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-inline: $space-3;
+  border-bottom: 6px solid $primary600;
 }
 
-header img {
-  height: 50px; 
-  margin: $space-3;
-}
+.logo {
+  height: 50px;
 
-@include respond(sm) {
-  header img {
-    height: 60%; 
-
+  @include respond(sm) {
+    height: 60px;
   }
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+.ring {
+  font-size: 18px;
+  color: $neutral0;
+  cursor: pointer;
+}
+
+.chevron {
+  font-size: 14px;
+  color: $neutral0;
+  cursor: pointer;
 }
