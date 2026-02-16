@@ -74,6 +74,7 @@
 .welcome-section {
   background-color: $primary950;
   padding: $space-5;
+  padding-bottom: 120px;
 }
 
 .welcome-section p {
@@ -164,10 +165,62 @@
 
   .video {
     grid-column: 2;
-    grid-row: 1 / span 2; 
+    grid-row: 1 / span 2;
     justify-self: end;
     max-width: none;
     width: 80%;
     border: 20px solid $primary100;
   }
+}
+
+/////////////////////////////////////////////////
+// QUIZ SECTION
+////////////////////////////////////////////////
+/// 
+.section-quiz {
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-5;
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* DESKTOP */
+@include respond(md) {
+  .section-quiz {
+    padding: $space-14;
+  }
+}
+
+h2 {
+  color: $primary900;
+  text-align: center;
+
+}
+
+.section-quiz p {
+  margin-top: $space-4;
+  text-align: center;
+  color: $primary900;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: $space-3;
+}
+
+button {
+  background-color: $secondary300;
+  border-radius: 90px 90px 90px 90px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: $space-4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: $space-4 auto 0 auto;
 }

@@ -152,6 +152,7 @@ p {
 .welcome-section {
   background-color: #083c44;
   padding: 40px;
+  padding-bottom: 120px;
 }
 
 .welcome-section p {
@@ -244,6 +245,51 @@ p {
     width: 80%;
     border: 20px solid #cffefb;
   }
+}
+.section-quiz {
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .section-quiz {
+    padding: 112px;
+  }
+}
+h2 {
+  color: #165963;
+  text-align: center;
+}
+
+.section-quiz p {
+  margin-top: 32px;
+  text-align: center;
+  color: #165963;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 24px;
+}
+
+button {
+  background-color: #ffd34a;
+  border-radius: 90px 90px 90px 90px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */
