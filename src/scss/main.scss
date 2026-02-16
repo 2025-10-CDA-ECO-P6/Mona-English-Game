@@ -1,3 +1,32 @@
-h1{ 
-    color: red;
+@use "abstracts/variables" as *;
+@use "abstracts/typography";
+@use "abstracts/spacing" as *;
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0;
+  background-color: $primary600;
+  padding: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 50px; 
+  margin: $space-3;
+}
+
+@include respond(sm) {
+  header img {
+    height: 60%; 
+
+  }
 }
