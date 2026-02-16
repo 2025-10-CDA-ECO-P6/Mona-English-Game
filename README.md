@@ -7,3 +7,6 @@ Ce projet consiste à réaliser une intégration front-end fidèle à une maquet
 - pnpm et Sass pour la compilation
 - Git pour le versionning
 - GitHub Pages pour l’hébergement
+
+## Deploiement
+[!GithubPages] https://2025-10-cda-eco-p6.github.io/Mona-English-Game/
