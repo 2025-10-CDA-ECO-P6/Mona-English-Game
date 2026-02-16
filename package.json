@@ -1,0 +1,17 @@
+{
+  "name": "mona-english-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass src/scss:public/css --watch",
+    "build": "sass src/scss:public/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.29.3",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

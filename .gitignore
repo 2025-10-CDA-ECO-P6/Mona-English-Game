@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+
+logs/
+.log
+npm-debug.log
+pnpm-debug.log*
+
+.env
+.env.local
+.env.*.local
+
+.sass-cache/
+.cache/
