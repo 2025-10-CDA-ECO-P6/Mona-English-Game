@@ -17,7 +17,7 @@
 ////////////////////////////////////////////////
 
 .header {
-  background-color: #165963;
+  background-color: $primary900;
   height: 100px;
   display: flex;
   align-items: center;
@@ -138,6 +138,10 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
+.video__play:hover {
+  transform: scale(1.1);
+}
+
 .video__play i {
   color: $primary600;
   font-size: 20px;
@@ -254,6 +258,12 @@ button {
   justify-content: center;
   align-items: center;
   margin: $space-4 auto 0 auto;
+}
+
+button:hover {
+  background-color: $secondary500;
+  transition: background-color 0.2s ease;
+  transform: scale(1.05);
 }
 
 /////////////////////////////////////////////////
@@ -447,5 +457,49 @@ button {
 
   .card__image {
     padding: $space-6;
+  }
+}
+
+/////////////////////////////////////////////////
+// FOOTER
+////////////////////////////////////////////////
+footer {
+  background-color: $primary900;
+  color: $neutral100;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  align-items: flex-start;  
+  justify-content: center;
+  height: auto;   
+  padding: $space-4;
+  border-radius: 30px 30px 0 0;
+  margin-top: -30px;        
+  position: relative;
+  z-index: 10;
+}
+
+footer .footer-left,
+footer .footer-right {
+  width: 100%;
+}
+
+
+@include respond(md) {
+  footer {
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-5;
+    padding-left: $space-14;
+    padding-right: $space-14;
+    border-radius: 50px 60px 0 0;
+    margin-top: -50px;
+  }
+
+  footer .footer-left,
+  footer .footer-right {
+    width: auto;
   }
 }
