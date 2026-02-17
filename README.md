@@ -74,8 +74,8 @@ Cela permet de :
 
 ## Aperçu de l'intégration 
 <div align="center">
-  <img src="public/assets/images_git/homepage-desktop.png" width="60%" alt="Homepage Desktop">
-  <img src="public/assets/images_git/homepage-mobile.png" width="5.5%" alt="Homepage Mobile">
+  <img src="assets/images_git/homepage-desktop.png" width="60%" alt="Homepage Desktop">
+  <img src="assets/images_git/homepage-mobile.png" width="5.5%" alt="Homepage Mobile">
 </div>
 
 ## Deploiement
