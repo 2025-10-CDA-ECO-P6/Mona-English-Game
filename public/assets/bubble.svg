@@ -1,0 +1,20 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bulle -->
+  <path d="M20 20
+           Q20 0 40 0
+           H260
+           Q280 0 280 20
+           V120
+           Q280 140 260 140
+           H120
+           L80 180
+           L85 140
+           H40
+           Q20 140 20 120
+           Z" fill="white"></path>
+
+  <!-- ? au centre -->
+  <text x="150" y="105" text-anchor="middle" font-size="90" font-weight="700" fill="#e6e6e6" font-family="Arial, sans-serif">
+    ?
+  </text>
+</svg>

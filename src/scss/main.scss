@@ -168,8 +168,39 @@
     grid-row: 1 / span 2;
     justify-self: end;
     max-width: none;
+    width: 100%;
+    margin-top: $space-6;
+  }
+}
+
+
+@include respond(xxl) {
+  .welcome-section {
+    padding: $space-14;
+  }
+
+  .welcome-section__content {
+    grid-template-columns: 5fr 7fr;
+    align-items: start;
+    column-gap: $space-8;
+  }
+
+  .title {
+    grid-column: 1;
+  }
+
+  .welcome-section__text {
+    grid-column: 1;
+  }
+
+  .video {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    max-width: none;
     width: 80%;
     border: 20px solid $primary100;
+    margin-top: 0px;
   }
 }
 
@@ -223,4 +254,197 @@ button {
   justify-content: center;
   align-items: center;
   margin: $space-4 auto 0 auto;
+}
+
+/////////////////////////////////////////////////
+// CHALLENGE SECTION
+////////////////////////////////////////////////
+
+.section-challenge {
+  background-color: $primary600;
+  padding: $space-5;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+// BACKGROUND BUBBLE
+.section-challenge::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  aspect-ratio: 3 / 2;
+  background: url("/public/assets/bubble.svg") no-repeat center;
+  background-size: contain;
+  opacity: 0.12;
+  top: 80px;
+  left: -80px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-challenge h2 {
+  margin-top: $space-4;
+  color: $primary100;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-cards {
+  display: flex;
+  flex-direction: column;
+  gap: $space-12;
+  margin: $space-8 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-4;
+  text-align: center;
+}
+
+.card:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.card:nth-child(even) {
+  align-self: flex-end;
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: $neutral0;
+  border-radius: 50px;
+  display: flex;
+  padding: $space-6;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card__image:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease;
+}
+
+.card:nth-child(odd) .card__image {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.card:nth-child(even) .card__image {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card__image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card p {
+  color: $primary100;
+  max-width: 420px;
+  text-align: left;
+  align-self: flex-start;
+  padding-left: $space-4;
+  margin: 0;
+}
+
+@include respond(md) {
+  .section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 260px));
+    justify-content: center;
+    column-gap: 60px;
+    row-gap: $space-6;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 260px;
+    align-self: stretch;
+    align-items: stretch;
+  }
+
+  // Odd = impair, Even = pair
+  .card:nth-child(odd) .card__image,
+  .card:nth-child(even) .card__image {
+    border-radius: 50px;
+  }
+
+  .card__image {
+    padding: $space-4;
+  }
+
+  .card p {
+    max-width: none;
+    width: 100%;
+    padding-left: $space-4;
+  }
+
+  .section-challenge::before {
+    width: 800px;
+    top: 50px;
+    left: -200px;
+  }
+}
+
+@include respond(lg) {
+  .section-cards {
+    grid-template-columns: repeat(3, 320px);
+    column-gap: 100px;
+  }
+
+  .card {
+    max-width: 320px;
+  }
+
+  .card__image {
+    padding: $space-5;
+  }
+
+  .section-challenge::before {
+    width: 1000px;
+    top: 40px;
+    left: -220px;
+  }
+}
+
+@include respond(xl) {
+  .section-cards {
+    grid-template-columns: repeat(3, 260px);
+    column-gap: 140px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+}
+
+@include respond(xxl) {
+  .section-cards {
+    grid-template-columns: repeat(3, 360px);
+    column-gap: 200px;
+  }
+
+  .card {
+    max-width: 360px;
+  }
+
+  .card__image {
+    padding: $space-6;
+  }
 }
